@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int i,a[10],n;
+    int search,found=0;
+    printf("enter n value:");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter search element:");
+    scanf("%d",&search);
+    
+    for(i=0;i<n;i++)
+    { 
+        if(search==a[i])
+        {
+            found=1;
+            break;
+        }
+        
+        
+    }
+    if(found==1)
+    {
+        printf("element found");
+    }
+    else
+    {
+        printf("element not found");
+    }
+   
+    
+
+}
