@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int num,num2,temp;
+    int *ptr;
+    int *ptr1;
+    printf("enter number:");
+    scanf("%d %d",&num,&num2);
+    ptr=&num;
+    ptr1=&num2;
+    temp=*ptr;
+    *ptr=*ptr1;
+    *ptr1=temp;
+    printf("%d",*ptr);
+    printf("%d",*ptr1);
+}
