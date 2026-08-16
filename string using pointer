@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    char *ptr;
+    char a[5];
+  
+   printf("enter string:");
+   scanf("%s",&a);
+    ptr=a;
+   while(*ptr!='\0')
+   {
+    printf("%c",*ptr);
+    ptr++;
+   }
+   
+
+}
