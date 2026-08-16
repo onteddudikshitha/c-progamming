@@ -1,0 +1,16 @@
+#include<stdio.h>
+void display(int *x);
+int main()
+{
+    int x;
+    display(&x);
+    printf("%d",x);
+}
+void display(int *x)
+{
+    int a,b,c;
+    printf("enter a and b:");
+    scanf("%d %d",&a,&b);
+    *x=a+b;
+   
+}
