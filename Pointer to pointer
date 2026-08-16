@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    int *p=&a;
+    int **pp=&p;
+    printf("value of pointer:%d",a);
+    printf("using pointer:%d",*p);
+    printf("using double pointer:%d",**pp);
+}
