@@ -1,0 +1,29 @@
+#include<stdio.h>
+struct student
+{
+    int id;
+    char name[30];
+    int marks;
+};
+
+int main()
+{
+    struct student s;
+    struct student *ptr;
+
+    printf("Enter id: ");
+    scanf("%d", &s.id);
+
+    printf("Enter name: ");
+    scanf("%s", s.name);
+
+    printf("Enter marks: ");
+    scanf("%d", &s.marks);
+
+    ptr = &s;
+
+    printf("\nStudent details:\n");
+    printf("ID = %d\n", ptr->id);
+    printf("Name = %s\n", ptr->name);
+    printf("Marks = %d\n", ptr->marks);
+}
