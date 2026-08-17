@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    FILE *fp;
+    fp=fopen("student.txt","w");
+    if(fp==NULL)
+    {
+        printf("file is not created");
+    }
+    fprintf(fp,"dikshitha");
+    fclose(fp);
+    printf("file created and data written successfully");
+}
