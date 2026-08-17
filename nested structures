@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+struct details
+{
+   int id;
+   char name[30];
+};
+struct employee
+{
+   int salary;
+   struct details d;
+};
+int main()
+{
+    struct employee e;
+    printf("enter details:\n");
+    printf("enter id:");
+    scanf("%d",&e.d.id);
+    printf("enter name:");
+    scanf("%s",e.d.name);
+    printf("enter salary:");
+    scanf("%d",&e.salary);
+
+    printf("id=%d\n",e.d.id);
+    printf("name=%s\n",e.d.name);
+    printf("salry=%d\n",e.salary);
+}
