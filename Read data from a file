@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    FILE *fp;
+    char str[100];
+    fp=fopen("student.txt","r");
+    if(fp==NULL)
+    {
+        printf("file is not created");
+    }
+    fscanf(fp,"%s",str);
+    printf("data from file:%s",str);
+    fclose(fp);
+}
