@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    FILE *fp1;
+    char str[100],ch;
+    int count=0,inword=0;;
+    fp1=fopen("student.txt","r");
+    if(fp1==NULL)
+    {
+        printf("file is not created");
+    }
+    while((ch=getc(fp1))!=EOF)
+    {
+        if(ch!=' ' && ch!='\n' && ch!= '\t')
+        {
+            if(inword==0)
+            {
+                count++;
+                inword=1;
+            }
+            
+        }
+        else{
+            inword=0;
+        }
+       
+    }
+    printf("%d",count);
+    fclose(fp1);
+}
