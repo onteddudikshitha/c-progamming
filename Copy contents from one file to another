@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    FILE *fp1,*fp2;
+    char str[100],ch;
+    fp1=fopen("student.txt","r");
+    fp2=fopen("abc.txt","w");
+    if(fp1==NULL)
+    {
+        printf("file is not created");
+    }
+    if(fp2==NULL)
+    {
+        printf("file is not open");
+    }
+    while((ch=getc(fp1))!=EOF)
+    {
+        fputc(ch,fp2);
+    }
+    fclose(fp1);
+    fclose(fp2);
+    printf("file copied successfully");
+
+    
+}
