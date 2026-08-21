@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct student 
+{
+   int id;
+   char name[90];
+   int marks;   
+};
+int main()
+{
+    struct student s;
+    FILE *fp;
+    fp=fopen("student.txt","w");
+    if(fp==NULL)
+    {
+        printf("file not created");
+        return;
+    }
+    printf("enter name");
+    scanf("%d",&s.id);
+    printf("enter name:");
+    scanf("%s",s.name);
+    printf("enter marks:");
+    scanf("%d",&s.marks);
+    fprintf(fp,"%d %s %d",s.id,s.name,s.marks);
+    fclose(fp);
+    fp=fopen("student.txt","r");
+      if(fp==NULL)
+    {
+        printf("file not created");
+        return;
+    }
+    
+    fscanf(fp,"%d %s %d",&s.id,s.name,&s.marks);
+    printf("id=%d",s.id);
+    printf("name=%s",s.name);
+    printf("marks=%d",s.marks);
+
+
+    fclose(fp);
+    
+}
